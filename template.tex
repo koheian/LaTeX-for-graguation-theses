@@ -1,0 +1,133 @@
+\documentclass[11pt]{jsarticle}
+
+%tabular環境での縦書き
+\usepackage{plext}
+%余白設定
+\setlength{\topmargin}{15pt}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\iftombow
+	\addtolength{\topmargin}{-1in}
+\else
+	\addtolength{\topmargin}{-1 truein}
+\fi
+%図
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+%数学の何かのフォント
+\usepackage{amsmath}
+\usepackage{mathpazo}
+\usepackage{amssymb}
+%サブキャプション
+\usepackage[subrefformat=parens]{subcaption}
+
+
+%sectionコマンドの編集
+\renewcommand{\presectionname}{第}
+\renewcommand{\postsectionname}{章}%「第~部」を「第~章」に変える
+\newcommand{\newsection}[1]{\clearpage \vspace*{24zw} \section{#1} \clearpage}
+
+
+%partの編集など
+\usepackage{titlesec}
+%\titleformat{\part}[display]{\normalfont\Huge\bfseries\filcenter}{\prepartname \thepart \postpartname}{20pt}{\Huge}
+
+%見出しの設定
+\titleformat{\section}[hang]{\normalfont\Huge\mcfamily}{\thesection}{1zw}{\filright}
+\titleformat{\subsection}[hang]{\Large\mcfamily}{\thesubsection}{1zw}{}
+\titleformat{\subsubsection}[hang]{\large\mcfamily}{\thesubsubsection}{1zw}{}
+%目次の設定
+\usepackage{titletoc}
+\setcounter{tocdepth}{3}
+\titlecontents{section}[1zw]{}{\thecontentslabel~~~}{}{}
+\titlecontents{subsection}[2zw]{}{\thecontentslabel~~~}{}{\titlerule*{・}\makebox[2zw][r]{\thecontentspage}}
+\titlecontents{subsubsection}[3zw]{}{\thecontentslabel~~~}{}{\titlerule*{・}\makebox[2zw][r]{\thecontentspage}}
+
+%図や表のキャプションの設定
+\usepackage{caption}
+\captionsetup[figure]{labelsep=quad}
+\captionsetup[table]{labelsep=quad}
+
+
+%タイトルページ
+%\title{卒論タイトル}
+%\author{著者の名前}
+%\date{\today}
+
+
+\begin{document}
+
+%\maketitle
+%\clearpage
+\tableofcontents
+\clearpage
+
+\newsection{これについて}
+
+\subsection{背景}
+背景です。
+\subsubsection{背景のサブセクション}
+aaa
+asfijaweopghapo
+
+
+
+jpvaewohgpuawehfaphvo
+
+fhviarehgoiahefopqhwpaueilghap9ueosihfpa8jeyp9f
+hq9wpuehf
+
+weiuhfaowefhw
+
+hvwe9aphgap98erog9ap8ewfhpoa
+
+hqw9ueghaf89pwehfp9hw\\
+fh9pwueaga9pwehfp
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figures/tlc_pair.png}
+	\caption{テスト図形 test figure}
+	\label{fig:test}
+\end{figure}%
+
+
+jqw0@eohgap89wehf0\\
+fjoas;ifeh
+hp9wroi
+\subsection{原理}
+\newsection{内容について}
+以下に表を作ります
+\begin{table}
+	\centering
+	\caption{テスト表}
+	\label{tab:test}
+	\begin{tabular}{|c|c|} \hline
+		あ & い　\\ \hline
+		asd & ewoi \\ \hline
+		がぢ & kgei \\ \hline
+	\end{tabular}
+\end{table}
+	
+\subsection{提案}
+\subsection{実験結果}
+\subsection{考察}
+\subsection{結論}
+\section*{謝辞}
+\section*{参考文献}
+%%例：
+%%		\item
+%%			著者名. 書籍名. 出版場所, 出版社名, 出版年.
+%%			\label{ref:example}
+%%		\item
+%%			著者名. ``ページタイトル''. サイト名. 
+%%			\verb|URL|, 
+%%			(参照 20xx-12-31).
+%%			\label{ref:example2}
+\begin{enumerate}
+	\item
+\end{enumerate}
+
+
+\end{document}
