@@ -50,6 +50,7 @@
 \captionsetup[table]{labelsep=quad}
 
 
+
 %タイトルページ
 %\title{卒論タイトル}
 %\author{著者の名前}
@@ -87,7 +88,7 @@ fh9pwueaga9pwehfp
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{figures/tlc_pair.png}
+	\includegraphics[width=0.6\linewidth]{test.png}
 	\caption{テスト図形 test figure}
 	\label{fig:test}
 \end{figure}%
@@ -111,6 +112,12 @@ hp9wroi
 \end{table}
 	
 \subsection{提案}
+箇条書き
+\begin{enumerate}
+	\item その壱
+	\item その弐
+\end{enumerate}
+
 \subsection{実験結果}
 \subsection{考察}
 \subsection{結論}
@@ -125,8 +132,11 @@ hp9wroi
 %%			\verb|URL|, 
 %%			(参照 20xx-12-31).
 %%			\label{ref:example2}
+
+%箇条書きの番号に括弧をつける
+\renewcommand{\labelenumi}{[\arabic{enumi}]}
 \begin{enumerate}
-	\item
+	\item 参考にした本
 \end{enumerate}
 
 
