@@ -1,10 +1,12 @@
-\documentclass[11pt]{jsarticle}
+\documentclass[11pt, a4paper]{jsarticle}
+
+\usepackage{layout}
 
 %tabular環境での縦書き
 \usepackage{plext}
 %余白設定
-\setlength{\topmargin}{15pt}
-\setlength{\textheight}{40\baselineskip}
+\setlength{\topmargin}{64pt}
+\setlength{\textheight}{39\baselineskip}
 \addtolength{\textheight}{\topskip}
 \iftombow
 	\addtolength{\topmargin}{-1in}
@@ -14,19 +16,33 @@
 %図
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{float}
-\usepackage{wrapfig}
+%\usepackage{wrapfig}
 %数学の何かのフォント
 \usepackage{amsmath}
 \usepackage{mathpazo}
 \usepackage{amssymb}
+%式番号に章番号もつける
+\numberwithin{equation}{section}
 %サブキャプション
 \usepackage[subrefformat=parens]{subcaption}
 
+%テキスト部分の長さ設定
+\setlength{\textheight}{566pt}
+%ヘッダの編集
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{}
+\lhead{}
+\renewcommand{\headrulewidth}{0.5pt}
+\setlength{\headsep}{28pt}
+%フッタの編集
+\cfoot{--~~\thepage~~--}
+\setlength{\footskip}{33pt}
+
+
 
 %sectionコマンドの編集
-\renewcommand{\presectionname}{第}
-\renewcommand{\postsectionname}{章}%「第~部」を「第~章」に変える
-\newcommand{\newsection}[1]{\clearpage \vspace*{24zw} \section{#1} \clearpage}
+\newcommand{\newsection}[1]{\clearpage \vspace*{20zw} \section{#1} \clearpage}
 
 
 %partの編集など
@@ -34,7 +50,7 @@
 %\titleformat{\part}[display]{\normalfont\Huge\bfseries\filcenter}{\prepartname \thepart \postpartname}{20pt}{\Huge}
 
 %見出しの設定
-\titleformat{\section}[hang]{\normalfont\Huge\mcfamily}{\thesection}{1zw}{\filright}
+\titleformat{\section}[hang]{\normalfont\Huge\mcfamily}{第\thesection 章}{1zw}{\filright}%「第~章」という表示に変える
 \titleformat{\subsection}[hang]{\Large\mcfamily}{\thesubsection}{1zw}{}
 \titleformat{\subsubsection}[hang]{\large\mcfamily}{\thesubsubsection}{1zw}{}
 %目次の設定
@@ -48,7 +64,10 @@
 \usepackage{caption}
 \captionsetup[figure]{labelsep=quad}
 \captionsetup[table]{labelsep=quad}
-
+  
+%行送り
+%\fontsize{11pt}{16.4pt}\selectfont
+\renewcommand{\baselinestretch}{0.9}
 
 
 %タイトルページ
@@ -58,16 +77,29 @@
 
 
 \begin{document}
+\layout
 
 %\maketitle
 %\clearpage
+\pagenumbering{roman}
 \tableofcontents
 \clearpage
+\pagenumbering{arabic}
 
 \newsection{これについて}
 
-\subsection{背景}
-背景です。
+\subsection{本研究の背景及び目的}
+カメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラ
+
+
+\begin{equation}
+a = b \label{eq:test}
+\end{equation}
+
+テストの式は式(\ref{eq:test})です。
+
+カメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラカメラ
+
 \subsubsection{背景のサブセクション}
 aaa
 asfijaweopghapo
@@ -110,6 +142,15 @@ hp9wroi
 		がぢ & kgei \\ \hline
 	\end{tabular}
 \end{table}
+
+
+２こめの式
+\begin{equation}
+asl;gtueoi
+\end{equation}
+\begin{equation}
+aedd=gtueoi
+\end{equation}
 	
 \subsection{提案}
 箇条書き
