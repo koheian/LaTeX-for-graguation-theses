@@ -48,13 +48,13 @@
 %\titleformat{\part}[display]{\normalfont\Huge\bfseries\filcenter}{\prepartname \thepart \postpartname}{20pt}{\Huge}
 
 %見出しの設定
-\titleformat{\section}[hang]{\normalfont\Huge\mcfamily}{第\thesection 章}{1zw}{\filright}%「第~章」という表示に変える
+\titleformat{\section}[hang]{\normalfont\Huge\mcfamily}{第\thesection{}章}{1zw}{\filright}%「第~章」という表示に変える
 \titleformat{\subsection}[hang]{\Large\mcfamily}{\thesubsection}{1zw}{}
 \titleformat{\subsubsection}[hang]{\large\mcfamily}{\thesubsubsection}{1zw}{}
 %目次の設定
 \usepackage{titletoc}
 \setcounter{tocdepth}{3}
-\titlecontents{section}[1zw]{}{\thecontentslabel~~~}{}{}
+\titlecontents{section}[1zw]{}{第\thecontentslabel{}章~~~}{}{}
 \titlecontents{subsection}[2zw]{}{\thecontentslabel~~~}{}{\titlerule*{・}\makebox[2zw][r]{\thecontentspage}}
 \titlecontents{subsubsection}[3zw]{}{\thecontentslabel~~~}{}{\titlerule*{・}\makebox[2zw][r]{\thecontentspage}}
 
